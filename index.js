@@ -25,5 +25,6 @@ app.use('/api/prodi', ProdiRoute);
 app.use('/api/pinjam', PinjamRoute);   
 app.use('/api/detail', detailRoute);
 app.use('/api/user', routerUser);         
-
+app.get('/', (req, res) => { res.json({message:"hello backend untuk vercel"});
+)};
 app.listen(5000);
