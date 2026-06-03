@@ -3,7 +3,7 @@ import {
 tambahuser, 
 loginuser
 } from "../controllers/user_controllers.js";
-import { authenticateToken } from "../middleware/verifytoken.js";
+import { authenticateToken } from "../middleware/VerifyToken.js";
 
 const routerUser = express.Router();
 routerUser.post("/", tambahuser);
