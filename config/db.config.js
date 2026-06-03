@@ -1,4 +1,6 @@
 import { Sequelize } from "sequelize";
+import mysql2 from "mysql2";
+
 const db = new Sequelize('matkul_web_lanjut', 'root', '',{
     host :"localhost",
     dialect : "mysql",
