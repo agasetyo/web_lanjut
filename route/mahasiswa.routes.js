@@ -11,7 +11,6 @@ import {
     deleteMahasiswa
 } from "../controllers/mahasiswa.controllers.js";
 
-
 router.get("/", authenticateToken, getAllMahasiswa);
 router.post("/", upload.none(), tambahMahasiswaBaru);
 router.get("/:mhs_id", cariMahasiswaByID);
