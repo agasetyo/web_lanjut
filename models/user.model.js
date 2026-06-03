@@ -1,0 +1,30 @@
+import { Sequelize } from "sequelize";
+import db from "../config/db.config.js";
+
+const { DataTypes } = Sequelize;
+const User = db.define(
+  "User",
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoincrement: true,
+    },
+    username: {
+      type: DataTypes.STRING,
+    },
+    password: {
+      type: DataTypes.STRING,
+    },
+    created_at: {
+      type: DataTypes.DATE,
+    },
+    updated_at: {
+      type: DataTypes.DATE,
+    },
+  },
+  {
+    freezeTableName: true,
+  },
+);
+export default User;
