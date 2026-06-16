@@ -8,6 +8,7 @@ import PinjamRoute from "./route/pinjam.route.js";
 import detailRoute from "./route/detail_pinjam.routes.js";
 import userRoute from "./route/user.routes.js";
 import multer from 'multer';
+import mysql2 from 'mysql2';
 
 
 const app = express();
@@ -26,5 +27,8 @@ app.use('/api/prodi', ProdiRoute);
 app.use('/api/pinjam', PinjamRoute);   
 app.use('/api/detail', detailRoute);
 app.use('/api/user', userRoute);
+app.get("/", (req, res) => {
+    res.json({ message: "Hello Coba Backend untuk Vercel" });
+});
 
 app.listen(5000);

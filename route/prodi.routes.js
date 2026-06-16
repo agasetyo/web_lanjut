@@ -14,9 +14,9 @@ import {
 
 
 router.get("/", authenticateToken, getAllProdi);
-router.post("/", upload.none(), tambahProdiBaru);
-router.get("/:prodi_id", cariProdiByID);
-router.patch("/:prodi_id", updateProdi);
-router.delete("/:prodi_id", deleteProdi);
+router.post("/", authenticateToken, upload.none(), tambahProdiBaru);
+router.get("/:prodi_id", authenticateToken, cariProdiByID);
+router.patch("/:prodi_id", authenticateToken, updateProdi);
+router.delete("/:prodi_id", authenticateToken, deleteProdi);
 
 export default router;

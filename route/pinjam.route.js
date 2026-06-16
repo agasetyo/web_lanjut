@@ -1,5 +1,6 @@
 import express from "express";
 import multer from 'multer';
+import { authenticateToken } from "../middleware/VerifyTokens.js";
 
 const router = express.Router();
 const upload = multer();
@@ -14,9 +15,9 @@ import {
 } from "../controllers/pinjam.controllers.js";
 
 router.get("/", authenticateToken, getAllpinjam);
-router.post("/", upload.none(), tambahpinjamBaru);
-router.get("/:pinjam_id", caripinjamByID);
-router.patch("/:pinjam_id", updatepinjam);
-router.delete("/:pinjam_id", deletepinjam);
+router.post("/", authenticateToken, upload.none(), tambahpinjamBaru);
+router.get("/:pinjam_id", authenticateToken, caripinjamByID);
+router.patch("/:pinjam_id", authenticateToken, updatepinjam);
+router.delete("/:pinjam_id", authenticateToken, deletepinjam);
 
 export default router;
