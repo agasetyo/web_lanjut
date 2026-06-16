@@ -1,5 +1,7 @@
 import { Sequelize } from "sequelize";
-const db = new Sequelize('web_lanjut', 'root', '',{
+import mysql2 from "mysql2";
+
+const db = new Sequelize('web_lanjut', '', '',{
     host :"localhost",
     dialect : "mysql",
     "define": {
