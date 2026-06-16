@@ -15,6 +15,6 @@ const db = new Sequelize(process.env.DATABASE_URL,{
 });
 export default db;
 
-(async()=>{
-    await db.sync();
-})();
+// (async()=>{
+//     await db.sync();
+// })();
