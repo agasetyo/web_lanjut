@@ -1,6 +1,6 @@
 import express from "express";
 import multer from 'multer';
-import { authenticateToken } from "../middleware/authenticateToken.js";
+import { authenticateToken } from "../middleware/VerifyTokens.js";
 const router = express.Router();
 const upload = multer();
 
