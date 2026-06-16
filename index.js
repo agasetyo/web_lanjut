@@ -10,12 +10,12 @@ import userRoute from "./route/user.routes.js";
 import multer from 'multer';
 
 const app = express();
-try {
-    await db.authenticate();
-    console.log("Database ok...");
-} catch (error) {
-    console.log("belum konek: ", error);
-}
+// try {
+//     await db.authenticate();
+//     console.log("Database ok...");
+// } catch (error) {
+//     console.log("belum konek: ", error);
+// }
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
