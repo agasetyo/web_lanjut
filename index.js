@@ -8,12 +8,6 @@ import PinjamRoute from "./route/pinjam.route.js";
 import detailRoute from "./route/detail_pinjam.routes.js";
 import userRoute from "./route/user.routes.js";
 import multer from 'multer';
-<<<<<<< HEAD
-import mysql2 from 'mysql2';
-
-=======
-import 'mysql2';
->>>>>>> f486e88baf5ae78b78af19835108ed8123f601a3
 
 const app = express();
 try {
