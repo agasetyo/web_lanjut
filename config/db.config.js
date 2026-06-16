@@ -1,9 +1,9 @@
 import { Sequelize } from "sequelize";
 import mysql2 from "mysql2";
 
-const db = new Sequelize('web_lanjut', '', '',{
-    host :"localhost",
+const db = new Sequelize(process.env.DATABASE_URL,{
     dialect : "mysql",
+    dialectModule : mysql2,
     "define": {
         "timestamps": false
     }
