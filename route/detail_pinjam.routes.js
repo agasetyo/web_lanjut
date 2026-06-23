@@ -1,8 +1,8 @@
 import express from "express";
 import multer from 'multer';
-import { authenticateToken } from "../middleware/VerifyTokens.js";
 const router = express.Router();
 const upload = multer();
+import { authenticateToken } from "../middleware/VerifyToken.js";
 
 import {
     getAlldetail,
@@ -14,6 +14,8 @@ import {
     prosesPengembalian,
     laporanPengembalian
 } from "../controllers/detail_pinjam.controllers.js";
+
+
 
 router.get("/", authenticateToken, getAlldetail);
 router.get("/detail_id", authenticateToken, cariDetailByID);

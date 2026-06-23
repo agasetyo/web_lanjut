@@ -9,7 +9,7 @@ const detail_pinjam = db.define(
     {
         id: {
             type: DataTypes.INTEGER,
-            autoincrement: true,
+            autoIncrement: true,
             primaryKey: true,
         },
         pinjam_id: {
