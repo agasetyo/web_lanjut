@@ -12,7 +12,7 @@ import MahasiswaRoute from "./route/mahasiswa.routes.js";
 import ProdiRoute from "./route/prodi.routes.js";
 import PinjamRoute from "./route/pinjam.route.js";
 import detailRoute from "./route/detail_pinjam.routes.js";
-import userRoute from "./route/user.routes.js";
+import userRoute from "./route/user_routes.js";
 import multer from 'multer';
 
 const app = express();
